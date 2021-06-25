@@ -49,7 +49,7 @@ set mmp=5000
 " Avoid collapsed highlight for larger fenced code blocks
 let g:markdown_minlines=100
 
-highlight markdownCode ctermfg=green
+"highlight markdownCode ctermfg=green
 highlight Normal ctermbg=0
 "highlight comment ctermfg=59
 
