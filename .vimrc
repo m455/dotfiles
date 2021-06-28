@@ -85,15 +85,17 @@ autocmd bufenter,filetype *.txt,*.md :call HighlightBadWords()
 fun! SetWritingMode()
     noremap j gj
     noremap k gk
+    noremap $ g$
+    noremap ^ g^
     setlocal softtabstop=2
     setlocal shiftwidth=2
     setlocal spell
     setlocal textwidth=0
     setlocal wrapmargin=0
     setlocal wrap
-    "setlocal linebreak split
-    "setlocal columns=100
-    "autocmd VimResized * if (&columns > 100) | set columns=100 | endif
+    " This makes copy and pasting annoying because it will add extra spaces
+    " after the words at the end, but makes eading nicer :shrug:
+    " setlocal linebreak
 endfu
 autocmd bufenter,filetype *.txt,*.md :call SetWritingMode()
 
