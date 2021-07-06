@@ -17,6 +17,8 @@ filetype on                           " Filetype detection
 filetype plugin on                    " Filetype plugins
 filetype indent on                    " Filetype-based indentation
 syntax on                             " Enable syntax highlighting
+set number                            " Turn on line numbers
+set relativenumber                    " Use relative line numbers
 set t_Co=256                          " Use 256 colours
 set background=dark                   " For terminals with a light or dark
 colorscheme molokai                   " Yep
@@ -51,6 +53,7 @@ let g:markdown_minlines=100
 
 highlight markdownCode ctermfg=green
 highlight Normal ctermbg=0
+highlight LineNr ctermfg=59 ctermbg=0
 "highlight comment ctermfg=59
 
 fun! MyHighlights()
