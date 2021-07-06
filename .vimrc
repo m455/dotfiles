@@ -77,9 +77,7 @@ fun! HighlightBadWords()
                         \%(\csee \)\|\
                         \%(\csince\)\|\
                         \%(\csunset\)\|\
-                        \%(\cdropdown\)\|\
-                        \%(\cdepreciat\)\|\
-                        \%(\cdeprecat\)/
+                        \%(\cdropdown\)/
     highlight badWords ctermbg=red ctermfg=black
 endfu
 autocmd bufenter,filetype *.txt,*.md :call HighlightBadWords()
