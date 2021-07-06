@@ -24,6 +24,7 @@ else
   alias ls="ls --color=auto"
 fi
 
+alias files-changed="git diff --name-only HEAD HEAD~1"
 alias tedit="open -a TextEdit"
 alias notes="vim ~/notes/scratch-pad.md"
 alias checklist="vim ~/notes/docs-project-checklist.md"

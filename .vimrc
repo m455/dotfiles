@@ -6,7 +6,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'wlangstroth/vim-racket'
 Plug 'tomasr/molokai'
 
 call plug#end()
