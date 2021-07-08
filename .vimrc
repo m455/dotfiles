@@ -6,7 +6,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tomasr/molokai'
+Plug 'wlangstroth/vim-racket'
 Plug 'https://git.m455.casa/m455/6tn'
 
 call plug#end()
@@ -77,6 +77,7 @@ fun! HighlightBadWords()
                         \%(^\conce\)\|\
                         \%(\csee \)\|\
                         \%(\csince\)\|\
+                        \%(\cwill\)\|\
                         \%(\csunset\)\|\
                         \%(\cdropdown\)/
     highlight badWords ctermbg=red ctermfg=black
