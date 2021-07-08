@@ -7,6 +7,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'tomasr/molokai'
+Plug 'https://git.m455.casa/m455/6tn'
 
 call plug#end()
 
@@ -20,7 +21,7 @@ set number                            " Turn on line numbers
 set relativenumber                    " Use relative line numbers
 set t_Co=256                          " Use 256 colours
 set background=dark                   " For terminals with a light or dark
-colorscheme molokai                   " Yep
+colorscheme 6tn                       " Yep
 set nobackup noswapfile nowritebackup " Prevent backup and autosave files from happening
 set nowrap                            " Don't wrap lines
 set nomodeline                        " Modelines are a security hazard
@@ -50,9 +51,9 @@ set mmp=5000
 " Avoid collapsed highlight for larger fenced code blocks
 let g:markdown_minlines=100
 
-highlight markdownCode ctermfg=green
-highlight Normal ctermbg=0
-highlight LineNr ctermfg=59 ctermbg=0
+"highlight markdownCode ctermfg=green
+"highlight Normal ctermbg=0
+"highlight LineNr ctermfg=59 ctermbg=0
 "highlight comment ctermfg=59
 
 fun! MyHighlights()
