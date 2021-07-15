@@ -64,22 +64,24 @@ fun! MyHighlights()
 endfu
 autocmd BufReadPost * call MyHighlights()
 
+" \< marks the beginning of a word
+" \> marks the end of a word
+" \c ignores case
 fun! HighlightBadWords()
-    syn match badWords /\%(\cblacklist\)\|\
-                        \%(\cwhitelist\)\|\
-                        \%(\cbuyer\)\|\
-                        \%(\cfront line\)\|\
-                        \%(\cgrandfather\)\|\
-                        \%(\c able\)\|\
-                        \%(\cmay\)\|\
-                        \%(\cmust\)\|\
-                        \%(\c once\)\|\
-                        \%(^\conce\)\|\
-                        \%(\csee \)\|\
-                        \%(\csince\)\|\
-                        \%(\cwill\)\|\
-                        \%(\csunset\)\|\
-                        \%(\cdropdown\)/
+    syn match badWords /\%(\<\cblacklist\>\)\|\
+                        \%(\<\cwhitelist\>\)\|\
+                        \%(\<\cbuyer\>\)\|\
+                        \%(\<\cfront line\>\)\|\
+                        \%(\<\cgrandfather\>\)\|\
+                        \%(\<\cable\>\)\|\
+                        \%(\<\cmay\>\)\|\
+                        \%(\<\cmust\>\)\|\
+                        \%(\<\conce\>\)\|\
+                        \%(\<\csee\>\)\|\
+                        \%(\<\csince\>\)\|\
+                        \%(\<\cwill\>\)\|\
+                        \%(\<\csunset\>\)\|\
+                        \%(\<\cdropdown\>\)/
     highlight badWords ctermbg=red ctermfg=black
 endfu
 autocmd bufenter,filetype *.txt,*.md :call HighlightBadWords()
